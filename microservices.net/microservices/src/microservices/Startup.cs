@@ -18,7 +18,15 @@ namespace microservices
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)
         {
-            app.UseOwin(buildFunc => buildFunc.UseNancy());
+            app.UseOwin(buildFunc =>
+            {
+                buildFunc(next => env =>
+                {
+                    System.Console.WriteLine("Got request");
+                    return next(env);
+                });
+                buildFunc.UseNancy();
+            });
         }
 
         // Entry point for the application.
