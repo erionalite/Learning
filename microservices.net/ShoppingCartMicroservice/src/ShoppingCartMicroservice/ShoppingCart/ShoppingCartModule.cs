@@ -27,6 +27,16 @@ namespace ShoppingCart.ShoppingCart
                 shoppingCart.Save(shoppingCart);
                 return shoppingCart;
             };
+
+            Delete["/{userid:int}/items"] = parameters =>
+            {
+                var productcatalogIds = this.Bind<int[]>();
+                var userId = (int) parameters.id;
+                var shoppingCart = shoppingCartStore.Get(userId);
+                shoppingCart.RemoveItems(productcatalogIds, eventStore);
+                shoppingCartStore.Save(shoppingCart);
+                return shoppingCart;
+            };
         }
     }
 }

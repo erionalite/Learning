@@ -6,6 +6,7 @@ namespace ShoppingCart.ShoppingCart
     {
 
         ShoppingCart Get(int userID);
+        void Save(ShoppingCart shoppingCart);
     }
 
     public class ShoppingCartItem
@@ -19,6 +20,11 @@ namespace ShoppingCart.ShoppingCart
             return null;
         }
 
+        public void RemoveItems(int[] productcatalogIds, IEventStore eventStore)
+        {
+
+        }
+
         public void Save(ShoppingCart cart)
         {
         }
@@ -30,5 +36,11 @@ namespace ShoppingCart.ShoppingCart
         {
             return null;
         }
+
+        public void Save(ShoppingCart shoppingCart)
+        {
+            
+        }
+
     }
 }
