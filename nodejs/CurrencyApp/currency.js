@@ -12,4 +12,4 @@ Currency.prototype.canadianToUS = function ( canadian){
 Currency.prototype.USToCanadian  = function(us){
     return roundTwoDecimals(us/canadianDollar);
 }
-exports = Currency;
+exports = Currency; 
