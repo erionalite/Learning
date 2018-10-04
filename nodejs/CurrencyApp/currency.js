@@ -1,15 +1,15 @@
 
 var Currency = function(amount){
-    this.amount = amount;
+    this.canadianDollar = amount;
 }
 Currency.prototype.roundTwoDecimals = function(amount){
     return Math.round(amount *100)/100;
 }
 Currency.prototype.canadianToUS = function ( canadian){
-    return roundTwoDecimals(canadian*canadianDollar);
+    return this.roundTwoDecimals(canadian*this.canadianDollar);
 }
 
 Currency.prototype.USToCanadian  = function(us){
-    return roundTwoDecimals(us/canadianDollar);
+    return this.roundTwoDecimals(us/this.canadianDollar);
 }
-exports = Currency;
+module.exports = Currency; 
