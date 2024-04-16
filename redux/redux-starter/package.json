@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "redux": "^5.0.1"
+    "redux": "4.0"
   },
   "devDependencies": {
     "webpack": "^5.91.0",
