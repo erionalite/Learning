@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         Product Data
       </header>
-      <FilterProductTable products = {Data.getProducts()}/>
+       {FilterProductTable(Data.getProducts())}
     </div>
   );
 }
