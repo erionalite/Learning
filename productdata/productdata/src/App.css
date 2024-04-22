@@ -38,3 +38,26 @@
     transform: rotate(360deg);
   }
 }
+.product-data-results
+{
+    display:  table;
+    width:auto;
+    background-color:#eee;
+    border:1px solid  #666666;
+    border-spacing:5px;/*cellspacing:poor IE support for  this*/
+   /* border-collapse:separate;*/
+}
+
+.product-category-row,.product-row,.product-data-header
+{
+   display:table-row;
+   width:auto;
+}
+
+.product-name,.product-price
+{
+    float:left;/*fix for  buggy browsers*/
+    display:table-column;
+    width:200px;
+    background-color:#ccc;
+}
